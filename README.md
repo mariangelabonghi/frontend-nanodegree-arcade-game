@@ -1,6 +1,23 @@
-frontend-nanodegree-arcade-game
-===============================
+# Frogger Game
+##### Frogger Game is a simple web game composed by two level. In both levels, the objective for the player is to reach the water. If the player hits a gem, the score will increase. If the player hits a bug, the game will be over. In the second level there are also rocks: if the player hits a rock, the game will be over.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+# Installation
+##### Execute the following instructions:
+- Create a folder that will contain the game;
+- Open Git Bash and position itself on the path of your game folder, for example:
+```
+cd desktop/gamefrogger
+```
+- On Git Bash execute the following command:
+```
+$git clone https://github.com/mariangelabonghi/frontend-nanodegree-arcade-game.git
+```
+# Usage
+- Open the browser and add an exception in order to visualize popup. For security reasons, insert an exception only for the game, adding among the exceptions the path of the "index.html" file contained in the "frontend-nanodegree-arcade-game" folder;
+- Reload the browser;
+- Open with the browser the "index.html" file contained in the "frontend-nanodegree-arcade-game" folder;
+- Follow the game instructions.
+
+# Game Instructions
+##### Use the arrow keys to move the player. The game starts with the first level. You can increase the score picking the gems. If the player hits a bug, the game will be over. If the player reaches the water, the game will pass on the second level. In the second level, if the player hits a bug or a rock the game will be over. If the player reaches the water, you'll win the game.

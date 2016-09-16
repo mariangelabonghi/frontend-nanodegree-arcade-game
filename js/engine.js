@@ -107,6 +107,23 @@ var Engine = (function(global) {
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
+ 		//The variable "isleveltwo" tells us if the level is the first or the second
+        var isleveltwo=localStorage.getItem("isleveltwo");
+        //if the level is the second: Write "LEVEL TWO" and start from the score of the previous level (stored in the "storescore" variable)
+        if (isleveltwo === "Yes! this is the second level!"){
+            //clear the previous canvas and write level and score
+            canvas.width = canvas.width;
+            ctx.font="140% Georgia";
+            ctx.fillText("LEVEL TWO    Score: " + storescore , 10, 40);
+            ctx.strokeText("LEVEL TWO    Score: " + storescore, 10, 40);
+        }
+        else{
+            //is not the level two but is the first: Write "LEVEL ONE" and use the variable "score" that starts from zero
+            canvas.width = canvas.width;
+            ctx.font="140% Georgia";
+            ctx.fillText("LEVEL ONE    Score: " + score , 10, 40);
+            ctx.strokeText("LEVEL ONE    Score: " + score, 10, 40);}
+        //here ends the part dedicated to scoreboard
         var rowImages = [
                 'images/water-block.png',   // Top row is water
                 'images/stone-block.png',   // Row 1 of 3 of stone
@@ -152,6 +169,14 @@ var Engine = (function(global) {
         });
 
         player.render();
+        allGems.forEach(function(Gem) {
+            Gem.render();
+        });
+        if (isleveltwo === "Yes! this is the second level!"){
+            allRocks.forEach(function(Rock) {
+            Rock.render();
+        });
+        }
     }
 
     /* This function does nothing but it could have been a good place to
@@ -171,7 +196,9 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/Gem Blue.png',
+        'images/Rock.png'
     ]);
     Resources.onReady(init);
 
